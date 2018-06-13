@@ -7,9 +7,48 @@
     <meta name="description" content="RacikUI - Bootstrap Admin Template Ajax">
     <meta name="author" content="Boed Winangun">
     <meta name="keyword" content="Admin,Template,RacikUI,Open,Source,CSS,HTML,Dashboard">
+    <!-- Icons -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/simple-line-icons/css/simple-line-icons.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
-    
+<body class="o-wrap">
+    <header class="o-header">
+        header
+    </header>
+
+    <main class="o-body">
+        <div class="sidebar">
+            sidebar
+        </div>
+        <!-- sidebar -->
+
+        <main class="main">
+            main
+        </main>
+
+        <aside class="aside-menu">
+            aside
+        </aside>
+    </main>
+
+    <footer class="o-footer">
+        footer
+    </footer>   
+    <!-- Script -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="node_modules/@racikui/racikui-bootstrap/dist/js/racikui.min.js"></script>
+    <script>
+        $('#loadview').ajaxLoad();
+        $(document).ajaxComplete(function() {
+            Pace.restart()
+        });
+    </script>
 </body>
 </html>
