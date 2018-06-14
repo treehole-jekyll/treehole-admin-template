@@ -633,16 +633,18 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@racikui/racikui-bootstrap@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@racikui/racikui-bootstrap/-/racikui-bootstrap-1.0.2.tgz#5b5592e58797fdf80be5980e8e504f10ed881e26"
+"@racikui/racikui-bootstrap@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@racikui/racikui-bootstrap/-/racikui-bootstrap-1.1.1.tgz#f360d19bc3275e284f43db446c45fda5cc3e49c9"
   dependencies:
-    "@racikui/racikui-plugin-postinstall" "1.0.2"
+    "@racikui/racikui-plugin-postinstall" "^1.1.0"
     bootstrap "^4.1.1"
 
-"@racikui/racikui-plugin-postinstall@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@racikui/racikui-plugin-postinstall/-/racikui-plugin-postinstall-1.0.2.tgz#4bcad980e8dee467c36d16b988799222117ce5a7"
+"@racikui/racikui-plugin-postinstall@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@racikui/racikui-plugin-postinstall/-/racikui-plugin-postinstall-1.1.0.tgz#d31aaf684ac518723c5518c61a4cbb845e7a1c58"
+  dependencies:
+    chalk "^2.4.1"
 
 abbrev@1:
   version "1.1.1"

@@ -1,5 +1,8 @@
 // Import styles
 @import "node_modules/@racikui/racikui-bootstrap/scss/racikui";
 
+// Vendors
+@import "vendors/pace";
+
 // Bila anda ingin menambahkan sesuatu di sini.
 @import "custom";

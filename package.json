@@ -15,8 +15,10 @@
     "js": "npm-run-all --parallel js-compile* js-lint*",
     "js-compile": "cross-env PLUGINS=true babel src/js/src/ --out-dir src/js/ --source-maps",
     "js-lint": "eslint src/js/src",
+    "postinstall": "racikui-plugin-postinstall",
     "localhost": "browser-sync start --server \"./src\" --serveStatic \"./\" --files \"!./src/js/src/**/*, ./src/**/*, !./src/scss/**/*\"",
     "localhost-dist": "browser-sync start --server \"./dist\"",
+    "release-version": "node build/change-version.js",
     "serve": "npm-run-all --parallel localhost watch-css watch-js",
     "watch-css": "nodemon --ignore dist/ -e scss -x \"npm run css\"",
     "watch-js": "nodemon --watch src/js/src/ -x \"npm run js\""
@@ -45,7 +47,7 @@
   },
   "homepage": "https://github.com/racikui/racikui-bootstrap-admin-ajax#readme",
   "dependencies": {
-    "@racikui/racikui-bootstrap": "1.0.2",
+    "@racikui/racikui-bootstrap": "^1.1.1",
     "bootstrap": "4.1.1",
     "chart.js": "^2.7.2",
     "font-awesome": "4.7.0",
