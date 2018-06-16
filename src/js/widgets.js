@@ -1,9 +1,9 @@
-/* global Chart, CustomTooltips, getStyle */
+/* global Chart, getStyle */
 
 /**
  * --------------------------------------------------------------------------
- * CoreUI Free Boostrap Admin Template (v2.0.0): main.js
- * Licensed under MIT (https://coreui.io/license)
+ * RacikUI (v1.0.0): main.js
+ * Licensed under MIT
  * --------------------------------------------------------------------------
  */
 
@@ -12,8 +12,7 @@
 Chart.defaults.global.pointHitDetectionRadius = 1;
 Chart.defaults.global.tooltips.enabled = false;
 Chart.defaults.global.tooltips.mode = 'index';
-Chart.defaults.global.tooltips.position = 'nearest';
-Chart.defaults.global.tooltips.custom = CustomTooltips; // eslint-disable-next-line no-unused-vars
+Chart.defaults.global.tooltips.position = 'nearest'; // eslint-disable-next-line no-unused-vars
 
 var cardChart1 = new Chart($('#card-chart1'), {
   type: 'line',

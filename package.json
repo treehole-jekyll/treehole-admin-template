@@ -1,6 +1,6 @@
 {
   "name": "@racikui/racikui-bootstrap-admin-ajax",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Bootstrap Admin Template Ajax",
   "main": "src/index.html",
   "scripts": {
@@ -47,7 +47,7 @@
   },
   "homepage": "https://github.com/racikui/racikui-bootstrap-admin-ajax#readme",
   "dependencies": {
-    "@racikui/racikui-bootstrap": "^1.1.1",
+    "@racikui/racikui-bootstrap": "^1.1.2",
     "bootstrap": "4.1.1",
     "chart.js": "^2.7.2",
     "font-awesome": "4.7.0",

@@ -2,8 +2,8 @@
 
 /**
  * --------------------------------------------------------------------------
- * CoreUI Free Boostrap Admin Template (v2.0.0): colors.js
- * Licensed under MIT (https://coreui.io/license)
+ * RacikUI (v2.0.0): colors.js
+ * Licensed under MIT
  * --------------------------------------------------------------------------
  */
 $('.theme-color').each(function () {
