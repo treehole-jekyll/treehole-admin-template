@@ -15,31 +15,54 @@
   <title>RacikUI Bootstrap Admin Ajax</title>
 </head>
 <body class="o-wrap header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+  <!-- Header -->
   <header class="o-header navbar">
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- <a class="navbar-brand" href="#"></a> -->
+    <a class="navbar-brand" href="#">
+      <div class="navbar-brand-full"><h3 class="m-0">RacikUI</h3></div>
+      <div class="navbar-brand-minimized"><h3 class="m-0">UI</h3></div>
+    </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <!-- Nav Left -->
     <ul class="nav navbar-nav d-md-down-none">
+      <li class="nav-item px-3">
+        <a class="nav-link" href="#">Home</a>
+      </li>
       <li class="nav-item px-3">
         <a class="nav-link" href="#">Settings</a>
       </li>
     </ul>
+
     <!-- Nav right -->
     <ul class="nav navbar-nav ml-auto">
-      <li class="nav-item d-md-down-none">
-        <a class="nav-link" href="#">
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="icon-bell"></i>
           <span class="badge badge-pill badge-danger">5</span>
         </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-header text-center">5 Notifications</span>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-envelope mr-2"></i> 5 new messages
+            <span class="float-right text-muted text-sm">2 mins</span>
+          </a>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-file mr-2"></i> 2 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <a href="#" class="dropdown-item dropdown-footer text-center">See All Notifications</a>
+        </div>
       </li>
+      <!-- User Dropdown -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <img class="img-avatar" src="img/avatars/1.jpg" alt="admin@bootstrapmaster.com">
+          <img class="img-avatar" src="img/avatars/default-150x150.png" alt="admin@racikproject.com">
         </a>
         <div class="dropdown-menu dropdown-menu-right">
           <div class="dropdown-header text-center">
@@ -68,225 +91,241 @@
         </div>
       </li>
     </ul>
+
     <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
-      <span class="navbar-toggler-icon"></span>
+      <i class="fa fa-th-large"></i>
     </button>
     <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
-      <span class="navbar-toggler-icon"></span>
+      <i class="fa fa-th-large"></i>
     </button>
   </header>
+  <!-- /.header -->
 
+  <!-- Body Container -->
   <div class="o-body">
-    <div class="sidebar">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Sidebar Menu -->
       <nav class="sidebar-nav">
         <ul class="nav">
+          <!-- Dashboard -->
           <li class="nav-item">
             <a class="nav-link" href="dashboard.html">
-              <i class="nav-icon icon-speedometer"></i> Dashboard
-              <span class="badge badge-primary">NEW</span>
-            </a>
+              <i class="nav-icon icon-speedometer"></i> Dashboard v1
+              <span class="badge badge-success">NEW</span></a>
           </li>
           <li class="nav-title">Theme</li>
           <li class="nav-item">
-            <a class="nav-link" href="theme/colors.html">
+            <a class="nav-link" href="pages/colors.html">
               <i class="nav-icon icon-drop"></i> Colors</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="theme/typography.html">
+            <a class="nav-link" href="pages/typography.html">
               <i class="nav-icon icon-pencil"></i> Typography</a>
           </li>
           <li class="nav-title">Components</li>
+          <!-- Base -->
           <li class="nav-item nav-dropdown">
             <a class="nav-link nav-dropdown-toggle" href="#">
               <i class="nav-icon icon-puzzle"></i> Base</a>
             <ul class="nav-dropdown-items">
               <li class="nav-item">
                 <a class="nav-link" href="base/breadcrumb.html">
-                  <i class="nav-icon icon-puzzle"></i> Breadcrumb</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Breadcrumb</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/cards.html">
-                  <i class="nav-icon icon-puzzle"></i> Cards</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Cards</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/carousel.html">
-                  <i class="nav-icon icon-puzzle"></i> Carousel</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Carousel</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/collapse.html">
-                  <i class="nav-icon icon-puzzle"></i> Collapse</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Collapse</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/forms.html">
-                  <i class="nav-icon icon-puzzle"></i> Forms</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="base/jumbotron.html">
-                  <i class="nav-icon icon-puzzle"></i> Jumbotron</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Forms</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/list-group.html">
-                  <i class="nav-icon icon-puzzle"></i> List group</a>
+                  <i class="nav-icon fa fa-circle-o"></i> List group</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/navs.html">
-                  <i class="nav-icon icon-puzzle"></i> Navs</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Navs</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/pagination.html">
-                  <i class="nav-icon icon-puzzle"></i> Pagination</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Pagination</a>
               </li>              
               <li class="nav-item">
                 <a class="nav-link" href="base/popovers.html">
-                  <i class="nav-icon icon-puzzle"></i> Popovers</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Popovers</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/progress.html">
-                  <i class="nav-icon icon-puzzle"></i> Progress</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Progress</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/scrollspy.html">
-                  <i class="nav-icon icon-puzzle"></i> Scrollspy</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Scrollspy</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/switches.html">
-                  <i class="nav-icon icon-puzzle"></i> Switches</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Switches</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/tables.html">
-                  <i class="nav-icon icon-puzzle"></i> Tables</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Tables</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/tabs.html">
-                  <i class="nav-icon icon-puzzle"></i> Tabs</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Tabs</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="base/tooltips.html">
-                  <i class="nav-icon icon-puzzle"></i> Tooltips</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Tooltips</a>
               </li>
             </ul>
           </li>
+          <!-- Buttons -->
           <li class="nav-item nav-dropdown">
             <a class="nav-link nav-dropdown-toggle" href="#">
               <i class="nav-icon icon-cursor"></i> Buttons</a>
             <ul class="nav-dropdown-items">
               <li class="nav-item">
                 <a class="nav-link" href="buttons/buttons.html">
-                  <i class="nav-icon icon-cursor"></i> Buttons</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Buttons</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="buttons/button-group.html">
-                  <i class="nav-icon icon-cursor"></i> Buttons Group</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Buttons Group</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="buttons/dropdowns.html">
-                  <i class="nav-icon icon-cursor"></i> Dropdowns</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Dropdowns</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="buttons/brand-buttons.html">
-                  <i class="nav-icon icon-cursor"></i> Brand Buttons</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Brand Buttons</a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="pages/charts.html">
               <i class="nav-icon icon-pie-chart"></i> Charts</a>
           </li>
+          <!-- Icons -->
           <li class="nav-item nav-dropdown">
             <a class="nav-link nav-dropdown-toggle" href="#">
               <i class="nav-icon icon-star"></i> Icons</a>
             <ul class="nav-dropdown-items">
               <li class="nav-item">
                 <a class="nav-link" href="icons/font-awesome.html">
-                  <i class="nav-icon icon-star"></i> Font Awesome
+                  <i class="nav-icon fa fa-circle-o"></i> Font Awesome
                   <span class="badge badge-secondary">4.7</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="icons/simple-line-icons.html">
-                  <i class="nav-icon icon-star"></i> Simple Line Icons</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Simple Line Icons</a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="widgets.html">
+            <a class="nav-link" href="pages/widgets.html">
               <i class="nav-icon icon-calculator"></i> Widgets
-              <span class="badge badge-primary">NEW</span>
+              <span class="badge badge-success">NEW</span>
             </a>
           </li>
           <li class="divider"></li>
-          <li class="nav-title">Extras</li>
+          <li class="nav-title">Examples</li>
           <li class="nav-item nav-dropdown">
             <a class="nav-link nav-dropdown-toggle" href="#">
-              <i class="nav-icon icon-star"></i> Pages</a>
+              <i class="nav-icon fa fa-book"></i> Pages</a>
             <ul class="nav-dropdown-items">
               <li class="nav-item">
                 <a class="nav-link" href="login.html" target="_top">
-                  <i class="nav-icon icon-star"></i> Login</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Login</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="register.html" target="_top">
-                  <i class="nav-icon icon-star"></i> Register</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="404.html" target="_top">
-                  <i class="nav-icon icon-star"></i> Error 404</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="500.html" target="_top">
-                  <i class="nav-icon icon-star"></i> Error 500</a>
+                  <i class="nav-icon fa fa-circle-o"></i> Register</a>
               </li>
             </ul>
           </li>
+          <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon fa fa-plus-square-o"></i> Extra</a>
+            <ul class="nav-dropdown-items">              
+              <li class="nav-item">
+                <a class="nav-link" href="404.html" target="_top">
+                  <i class="nav-icon fa fa-circle-o"></i> Error 404</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="500.html" target="_top">
+                  <i class="nav-icon fa fa-circle-o"></i> Error 500</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/blank.html">
+                  <i class="nav-icon fa fa-circle-o"></i> Blank Pages</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-title">Miscellaneous</li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="nav-icon fa fa-file"></i> Documentation
+            </a>
+          </li>
+          <!-- Download RacikUI -->
           <li class="nav-item mt-auto">
             <a class="nav-link nav-link-success" href="#" target="_top">
               <i class="nav-icon icon-cloud-download"></i> Download</a>
           </li>
         </ul>
       </nav>
+      <!-- /.Sidebar Menu -->
+
       <button class="sidebar-minimizer brand-minimizer" type="button"></button>
-    </div>
+    </aside>
+    <!-- /.Sidebar -->
 
+    <!-- Main Content -->
     <main class="main">
-      <!-- Breadcrumb-->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item active">
-          <a href="#">Dashboard</a>
-        </li>
-        <!-- Breadcrumb Menu-->
-        <li class="breadcrumb-menu d-md-down-none">
-          <div class="btn-group" role="group" aria-label="Button group">
-            <a class="btn" href="./">
-              <i class="icon-graph"></i>  Dashboard</a>
-            <a class="btn" href="#">
-              <i class="icon-settings"></i>  Settings</a>
-          </div>
-        </li>
-      </ol>
-
+      <!-- Content -->
       <div class="container-fluid">
         <div id="loadview"></div>
       </div>
+      <!-- /.Content -->
     </main>
+    <!-- /.Main Content -->
 
+    <!-- Aside Menu -->
     <aside class="aside-menu">
       aside
     </aside>
+    <!-- /.Aside Menu -->
   </div>
+  <!-- /.Body Container -->
 
+  <!-- Footer -->
   <footer class="o-footer">
     <div>
-      <a href="#">RacikUI</a>
+      <strong><a href="#">RacikUI</a></strong>
       <span>&copy; 2018 racikproject.</span>
     </div>
+
     <div class="ml-auto">
-      <span>Powered by</span>
-      <a href="#">RacikUI</a>
+      <strong>Version</strong> 1.2.0
     </div>
   </footer>
+  <!-- /.Footer -->
 
-  <!-- Script -->
+  <!-- REQUIRED SCRIPTS -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

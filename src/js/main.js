@@ -1,18 +1,22 @@
 /* eslint-disable object-shorthand */
 
-/* global Chart, getStyle, hexToRgba */
+/* global Chart, getStyle */
 
 /**
  * --------------------------------------------------------------------------
- * RacikUI (v1.0.0): main.js
+ * RacikUI (v1.2.0): main.js
  * Licensed under MIT
  * --------------------------------------------------------------------------
  */
 
 /* eslint-disable no-magic-numbers */
-// Disable the on-canvas tooltip
+var ticksStyle = {
+  fontColor: '#495057',
+  fontStyle: 'bold' // Disable the on-canvas tooltip
+
+};
 Chart.defaults.global.pointHitDetectionRadius = 1;
-Chart.defaults.global.tooltips.enabled = false;
+Chart.defaults.global.tooltips.enabled = true;
 Chart.defaults.global.tooltips.mode = 'index';
 Chart.defaults.global.tooltips.position = 'nearest'; // eslint-disable-next-line no-unused-vars
 
@@ -71,7 +75,7 @@ var cardChart2 = new Chart($('#card-chart2'), {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [{
       label: 'My First dataset',
-      backgroundColor: getStyle('--info'),
+      backgroundColor: getStyle('--success'),
       borderColor: 'rgba(255,255,255,.55)',
       data: [1, 18, 9, 17, 34, 22, 11]
     }]
@@ -180,61 +184,112 @@ var cardChart4 = new Chart($('#card-chart4'), {
   }
 }); // eslint-disable-next-line no-unused-vars
 
-var mainChart = new Chart($('#main-chart'), {
-  type: 'line',
+var salesChart = new Chart($('#sales-chart'), {
+  type: 'bar',
   data: {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    labels: ['JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
     datasets: [{
-      label: 'My First dataset',
-      backgroundColor: hexToRgba(getStyle('--info'), 10),
-      borderColor: getStyle('--info'),
-      pointHoverBackgroundColor: '#fff',
-      borderWidth: 2,
-      data: [165, 180, 70, 69, 77, 57, 125, 165, 172, 91, 173, 138, 155, 89, 50, 161, 65, 163, 160, 103, 114, 185, 125, 196, 183, 64, 137, 95, 112, 175]
+      backgroundColor: '#007bff',
+      borderColor: '#007bff',
+      data: [1000, 2000, 3000, 2500, 2700, 2500, 3000]
     }, {
-      label: 'My Second dataset',
-      backgroundColor: 'transparent',
-      borderColor: getStyle('--success'),
-      pointHoverBackgroundColor: '#fff',
-      borderWidth: 2,
-      data: [92, 97, 80, 100, 86, 97, 83, 98, 87, 98, 93, 83, 87, 98, 96, 84, 91, 97, 88, 86, 94, 86, 95, 91, 98, 91, 92, 80, 83, 82]
-    }, {
-      label: 'My Third dataset',
-      backgroundColor: 'transparent',
-      borderColor: getStyle('--danger'),
-      pointHoverBackgroundColor: '#fff',
-      borderWidth: 1,
-      borderDash: [8, 5],
-      data: [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65]
+      backgroundColor: '#ced4da',
+      borderColor: '#ced4da',
+      data: [700, 1700, 2700, 2000, 1800, 1500, 2000]
     }]
   },
   options: {
     maintainAspectRatio: false,
+    tooltips: {
+      mode: Chart.defaults.global.tooltips.mode,
+      intersect: Chart.defaults.global.tooltips.enabled
+    },
+    hover: {
+      mode: Chart.defaults.global.tooltips.mode,
+      intersect: Chart.defaults.global.tooltips.enabled
+    },
     legend: {
       display: false
     },
     scales: {
-      xAxes: [{
-        gridLines: {
-          drawOnChartArea: false
-        }
-      }],
       yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          maxTicksLimit: 5,
-          stepSize: Math.ceil(250 / 5),
-          max: 250
-        }
+        // display: false,
+        gridLines: {
+          display: true,
+          lineWidth: '4px',
+          color: 'rgba(0, 0, 0, .2)',
+          zeroLineColor: 'transparent'
+        },
+        ticks: $.extend({
+          beginAtZero: true
+        }, ticksStyle)
+      }],
+      xAxes: [{
+        display: true,
+        gridLines: {
+          display: false
+        },
+        ticks: ticksStyle
       }]
+    }
+  }
+}); // eslint-disable-next-line no-unused-vars
+
+var visitorsChart = new Chart($('#visitors-chart'), {
+  data: {
+    labels: ['18th', '20th', '22nd', '24th', '26th', '28th', '30th'],
+    datasets: [{
+      type: 'line',
+      data: [100, 120, 170, 167, 180, 177, 160],
+      backgroundColor: 'transparent',
+      borderColor: '#007bff',
+      pointBorderColor: '#007bff',
+      pointBackgroundColor: '#007bff',
+      fill: false
+    }, {
+      type: 'line',
+      data: [60, 80, 70, 67, 80, 77, 100],
+      backgroundColor: 'tansparent',
+      borderColor: '#ced4da',
+      pointBorderColor: '#ced4da',
+      pointBackgroundColor: '#ced4da',
+      fill: false
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      mode: Chart.defaults.global.tooltips.mode,
+      intersect: Chart.defaults.global.tooltips.enabled
     },
-    elements: {
-      point: {
-        radius: 0,
-        hitRadius: 10,
-        hoverRadius: 4,
-        hoverBorderWidth: 3
-      }
+    hover: {
+      mode: Chart.defaults.global.tooltips.mode,
+      intersect: Chart.defaults.global.tooltips.enabled
+    },
+    legend: {
+      display: false
+    },
+    scales: {
+      yAxes: [{
+        // display: false,
+        gridLines: {
+          display: true,
+          lineWidth: '4px',
+          color: 'rgba(0, 0, 0, .2)',
+          zeroLineColor: 'transparent'
+        },
+        ticks: $.extend({
+          beginAtZero: true,
+          suggestedMax: 200
+        }, ticksStyle)
+      }],
+      xAxes: [{
+        display: true,
+        gridLines: {
+          display: false
+        },
+        ticks: ticksStyle
+      }]
     }
   }
 });

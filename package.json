@@ -1,6 +1,6 @@
 {
   "name": "@racikui/racikui-bootstrap-admin-ajax",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Bootstrap Admin Template Ajax",
   "main": "src/index.html",
   "scripts": {
@@ -18,7 +18,6 @@
     "postinstall": "racikui-plugin-postinstall",
     "localhost": "browser-sync start --server \"./src\" --serveStatic \"./\" --files \"!./src/js/src/**/*, ./src/**/*, !./src/scss/**/*\"",
     "localhost-dist": "browser-sync start --server \"./dist\"",
-    "release-version": "node build/change-version.js",
     "serve": "npm-run-all --parallel localhost watch-css watch-js",
     "watch-css": "nodemon --ignore dist/ -e scss -x \"npm run css\"",
     "watch-js": "nodemon --watch src/js/src/ -x \"npm run js\""
@@ -31,6 +30,8 @@
     "admin",
     "bootstrap",
     "css",
+    "template",
+    "theme",
     "dashboard",
     "framework",
     "responsive",
@@ -47,7 +48,7 @@
   },
   "homepage": "https://github.com/racikui/racikui-bootstrap-admin-ajax#readme",
   "dependencies": {
-    "@racikui/racikui-bootstrap": "^1.1.2",
+    "@racikui/racikui-bootstrap": "^1.2.0",
     "bootstrap": "4.1.1",
     "chart.js": "^2.7.2",
     "font-awesome": "4.7.0",

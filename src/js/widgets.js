@@ -2,7 +2,7 @@
 
 /**
  * --------------------------------------------------------------------------
- * RacikUI (v1.0.0): main.js
+ * RacikUI (v1.2.0): main.js
  * Licensed under MIT
  * --------------------------------------------------------------------------
  */
@@ -69,7 +69,7 @@ var cardChart2 = new Chart($('#card-chart2'), {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [{
       label: 'My First dataset',
-      backgroundColor: getStyle('--info'),
+      backgroundColor: getStyle('--success'),
       borderColor: 'rgba(255,255,255,.55)',
       data: [1, 18, 9, 17, 34, 22, 11]
     }]
