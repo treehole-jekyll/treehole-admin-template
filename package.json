@@ -4,9 +4,10 @@
   "description": "Bootstrap Admin Template Ajax",
   "main": "src/index.html",
   "scripts": {
-    "build": "npm-run-all css js build-clean build-copy",
+    "build": "npm-run-all css js build-clean build-copy build-vendors",
     "build-clean": "rimraf dist",
     "build-copy": "copyfiles -a -e \"src/scss/**/*\" -u 1 \"src/**/*\" dist/",
+    "build-vendors": "node build/vendors.js",
     "css": "npm-run-all --parallel css-compile* --sequential css-prefix css-minify*",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/style.scss src/css/style.css",
     "css-lint": "stylelint --config build/.stylelintrc --syntax scss \"src/scss/**/*.scss\"",
