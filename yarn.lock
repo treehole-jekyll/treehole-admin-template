@@ -633,9 +633,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@racikui/racikui-bootstrap@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@racikui/racikui-bootstrap/-/racikui-bootstrap-1.1.1.tgz#f360d19bc3275e284f43db446c45fda5cc3e49c9"
+"@racikui/racikui-bootstrap@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@racikui/racikui-bootstrap/-/racikui-bootstrap-1.2.1.tgz#6df3cb795ed1a6fe89c9804594d04105e2b12557"
   dependencies:
     "@racikui/racikui-plugin-postinstall" "^1.1.0"
     bootstrap "^4.1.1"
